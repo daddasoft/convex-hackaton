@@ -2,7 +2,7 @@
 import { useMutation, useQuery } from "convex/react";
 import { api } from "../../convex/_generated/api";
 import { Input } from "@/components/ui/input";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 const download = (filename: string, content: string) => {
   var element = document.createElement("a");
@@ -51,13 +51,13 @@ export default function Page() {
 
   const [propmt, setPrompt] = useState("");
   const [deleting, setDeleting] = useState("");
-
+const inputRef = useRef<HTMLInputElement>(null);
   const [loading, setLoading] = useState(false);
   return (
     <div className="flex items-center justify-center gap-3 px-10 py-6 flex-col">
       <Input
+      ref={inputRef}
         disabled={loading}
-        value={prompt}
         onChange={(t) => {
           setPrompt(t.target.value);
         }}
@@ -71,6 +71,9 @@ export default function Page() {
             prompt: propmt,
           });
           setPrompt("")
+          if(inputRef.current){
+            inputRef.current.value="";
+          }
           setLoading(false);
         }}
       >
