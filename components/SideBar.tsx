@@ -63,7 +63,7 @@ export default function SideBar({children}:{children:React.ReactNode}) {
       </div>
       <div className="flex-1">
 
-      <div className="flex items-center px-6 flex-1 py-3 justify-between shadow-sm">
+      <div className="flex sticky top-0 z-40 backdrop-blur-md items-center px-6 flex-1 py-3 justify-between shadow-sm">
         <Button
           onClick={() => setOpen((old) => !old)}
           variant="ghost"
