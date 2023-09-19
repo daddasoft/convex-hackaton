@@ -3,10 +3,7 @@
 a project for participants in the convex hackathon hosted by [WEB DEV Cody](https://www.youtube.com/watch?v=lBR8o1JpSrc&t=1s)
 
 ## Preview 
-
-
-      OPENAI_API_KEY
-    ![](./preview.png)
+![](./preview.png)
 
 ### Technogies used in the project 
 - [Convex](https://convex.dev)
