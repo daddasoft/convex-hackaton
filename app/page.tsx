@@ -46,14 +46,14 @@ export default function App() {
   return (
   <div className="py-7 px-6 space-y-3">
     <div className="text-center">
-       <h3 className="text-3xl font-semibold">Unlock The Power of AI</h3>
-    <p className="text-lg text-slate-600">
+       <h3 className="text-5xl font-semibold">Unlock The Power of AI</h3>
+    <p className="text-xl text-slate-600">
       Chat with the smartest AI - Experience the power of AI with us
     </p>
     </div>
     {LINKS.map((link) => (
        <Link href={link.path} key={link.name}
-        className="p-2 flex items-center rounded-md hover:shadow-lg hover:border-transparent transition-all gap-4 border"
+        className="p-4 flex items-center rounded-md hover:shadow-lg hover:border-transparent transition-all gap-4 border"
       >
         <div
           className={`p-3 ${link.colorClasses} rounded-md flex items-center justify-center`}
